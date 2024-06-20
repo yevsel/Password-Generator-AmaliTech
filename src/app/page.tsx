@@ -16,13 +16,14 @@ import { PasswordStrengthMainComponent,PasswordStrengthPercentage } from '@/comp
 import { GenerateButton } from '@/components/GenerateButton.style'
 import { EmptyMeasure } from '@/components/PasswordStrenghtComponents.style'
 import { FaArrowRight } from "react-icons/fa6";
-
 interface ICharacters{
   id:number,
   activate:boolean,
   characters:string,
   label:string
 }
+
+
 
 const MainPage = ()=> {
   
@@ -33,6 +34,8 @@ const MainPage = ()=> {
     const [showCopied,setShowCopied] = useState<boolean>(false)
     const [active,setActive] = useState<boolean>(false)
     const [sliderPosLeft,setSliderPosLeft] = useState<number>(0)
+    
+    // const jet_brains = JetBrains_Mono({subsets:["latin"]})
 
     
     let [characters,setCharacters] = useState<Array<ICharacters>>([
@@ -208,7 +211,7 @@ const MainPage = ()=> {
             
               <GenerateButton onClick={handleGeneratePassword}>
                   <div style={{display:"flex",alignItems:"center",gap:10}}>
-                    <p style={{fontFamily:"monospace",fontSize:"18px"}}>GENERATE</p>
+                    <p style={{fontSize:"18px"}}>GENERATE</p>
                     <FaArrowRight />
                     {/* <svg width="12"  height="12" xmlns="http://www.w3.org/2000/svg"><path fill="#24232C" d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"/></svg> */}
                   </div>

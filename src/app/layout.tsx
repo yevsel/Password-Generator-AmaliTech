@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter,JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { MainContainer } from "@/components/MainContainer.style";
 const inter = Inter({ subsets: ["latin"] });
+const jet_brains = JetBrains_Mono({subsets:["latin"]})
 
 export const metadata: Metadata = {
   title: "Password Generator",
@@ -16,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html style={{userSelect:"none"}} lang="en">
-      <body style={{backgroundColor:"var(---primary-color-deep-black)"}}>
+      <body className={jet_brains.className} style={{backgroundColor:"var(---primary-color-deep-black)"}}>
           {children}
       </body>
     </html>

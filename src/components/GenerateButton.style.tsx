@@ -14,11 +14,6 @@ export const GenerateButton = styled.div`
     align-items: center;
     justify-content: center;
     
-    /* & > *{
-        font-family: monospace;
-        font-size:18px;
-        color: var(---primary-color-black);
-    } */
 
     &:hover{
         background-color: var(---primary-color-black);

@@ -8,7 +8,7 @@ interface IText{
 }
 
 export const Text = styled.p<IText>`
-    font-family: monospace;
+    /* font-family: monospace; */
     font-size: ${(props)=>props.fontSize+"px"};
     color: ${(props)=>props.color};
     text-align: ${(props)=>props.textAlign};
