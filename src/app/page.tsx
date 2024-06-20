@@ -74,7 +74,8 @@ const MainPage = ()=> {
     },[])
     
     const handleMouseDown = (event:any) => {
-      
+      event.preventDefault()
+      // console.log("MOVEEE")
       if(canDrag){
         const mouseXPosition = sliderPosLeft?event.clientX - sliderPosLeft:0
         if(mouseXPosition>=475){
@@ -174,8 +175,8 @@ const MainPage = ()=> {
                   <SliderRange type='range'/>
                 </div> */}
               
-              <Slider id="slider" ballPosition={ballPosition} onTouchMove={canDrag?handleMouseDown:()=>{}}  onMouseMove={canDrag?handleMouseDown:()=>{}}>
-                <Ball onMouseUp={()=>setCanDrag(false)} onMouseDown={()=>setCanDrag(true)}  ballPosition={ballPosition}/>
+              <Slider id="slider" ballPosition={ballPosition}  onMouseMove={canDrag?handleMouseDown:()=>{}}>
+                <Ball onTouchStart={()=>setCanDrag(true)} onMouseUp={()=>setCanDrag(false)}  onMouseDown={()=>setCanDrag(true)}  ballPosition={ballPosition}/>
               </Slider>
               
               
