@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  
+  ---primary-color-black:#24232C;
+  ---primary-color-gray:#817D92;
+  ---primary-color-white:#E6E5EA;
+  ---primary-color-deep-black:#18171F;
+  ---secondary-color-green:#A4FFAF;
+  ---secondary-color-red:#F64A4A;
+  ---secondary-color-orange:#FB7C58;
+  ---secondary-color-yellow:#F8CD65;
+}
