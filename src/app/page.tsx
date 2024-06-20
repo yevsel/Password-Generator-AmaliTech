@@ -16,6 +16,7 @@ import { PasswordStrengthMainComponent,PasswordStrengthPercentage } from '@/comp
 import { GenerateButton } from '@/components/GenerateButton.style'
 import { EmptyMeasure } from '@/components/PasswordStrenghtComponents.style'
 import { FaArrowRight } from "react-icons/fa6";
+import { SliderRange } from '@/components/SliderRange.style'
 interface ICharacters{
   id:number,
   activate:boolean,
@@ -104,8 +105,6 @@ const MainPage = ()=> {
       //     setCharacterLength((a*15).toFixed(0))
       //     }
       // }
-      
-      
   };
 
   const handleChecked = (idx:number,activeState:boolean)=>{
@@ -171,7 +170,11 @@ const MainPage = ()=> {
                 </div>
               </FlexContainer>
               
-              <Slider id="slider" ballPosition={ballPosition}  onMouseMove={canDrag?handleMouseDown:()=>{}}>
+                {/* <div style={{display:"flex"}}>
+                  <SliderRange type='range'/>
+                </div> */}
+              
+              <Slider id="slider" ballPosition={ballPosition} onTouchMove={canDrag?handleMouseDown:()=>{}}  onMouseMove={canDrag?handleMouseDown:()=>{}}>
                 <Ball onMouseUp={()=>setCanDrag(false)} onMouseDown={()=>setCanDrag(true)}  ballPosition={ballPosition}/>
               </Slider>
               
