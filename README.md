@@ -34,3 +34,39 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+##  Strong Password Generator
+
+This is a password generator tool that helps you create secure and random passwords. 
+
+###  Features:
+
+* Generates passwords with various character sets:
+    * Lowercase letters (a-z)
+    * Uppercase letters (A-Z)
+    * Numbers (0-9)
+    * Symbols (!@#$%^&*)
+* Allows customization of password length.
+* Option to generate pronounceable passwords (for better memorability).
+
+###  Benefits of Using This Tool:
+
+* Creates strong passwords that are resistant to brute-force attacks.
+* Eliminates the need to reuse passwords across different accounts.
+* Offers flexibility to tailor password complexity to your needs.
+
+
+###  How to Use:
+
+1. Visit the password generator website.
+2. Choose your desired password length.
+3. Select the character sets you want to include.
+4. Click on "Generate Password" button.
+5. Copy the generated password securely.
+
+
+###  Security Considerations:
+
+* It is recommended to never share your generated passwords with anyone.
+* Consider using a password manager to store your passwords securely.
+* This tool itself should not store any generated passwords.

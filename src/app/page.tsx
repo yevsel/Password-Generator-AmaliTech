@@ -35,6 +35,7 @@ const MainPage = ()=> {
     const [showCopied,setShowCopied] = useState<boolean>(false)
     const [active,setActive] = useState<boolean>(false)
     const [sliderPosLeft,setSliderPosLeft] = useState<number>(0)
+    const [sliderPosRight,setSliderPosRight] = useState<number>(0)
     
     // const jet_brains = JetBrains_Mono({subsets:["latin"]})
 
@@ -67,9 +68,11 @@ const MainPage = ()=> {
     ])
     
     useEffect(()=>{
-      let slider = document.getElementById("slider")?.getBoundingClientRect().left
-      if(slider){
-        setSliderPosLeft(slider)
+      let sliderLeft = document.getElementById("slider")?.getBoundingClientRect().left
+      let sliderRight = document.getElementById("slider")?.getBoundingClientRect().right
+      if(sliderLeft && sliderRight){
+        setSliderPosLeft(sliderLeft)
+        setSliderPosRight(sliderRight)
       }
     },[])
     
@@ -77,6 +80,7 @@ const MainPage = ()=> {
       event.preventDefault()
       // console.log("MOVEEE")
       if(canDrag){
+        console.log("RIGHT",sliderPosRight)
         const mouseXPosition = sliderPosLeft?event.clientX - sliderPosLeft:0
         if(mouseXPosition>=475){
           setBallPosition(475)
@@ -127,7 +131,7 @@ const MainPage = ()=> {
     for (let i=0;i<characterLength;i++){
       randomPassword+=allChar[Math.floor(Math.random()*allChar.length)]
     }
-    if(randomPassword===undefined){
+    if(randomPassword.includes('undefined')){
       setGeneratedPassword("")
     }else{
       setGeneratedPassword(randomPassword)
