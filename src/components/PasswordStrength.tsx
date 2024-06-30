@@ -6,23 +6,23 @@ export const PasswordStrengthPercentage = (password: string) => {
     // Special character regex enter code here
     const specialChars = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.\/?~]/;
     const ownWeight : number = 20; 
-    // Atleat one number
+    // At least one number
     if (/\d/.test(password)) {
         percentage = percentage + ownWeight;
     }
-    // Atleat one lowercase alphabet
+    // At least one lowercase alphabet
     if (/.*[a-z].*/.test(password)) {
         percentage = percentage + ownWeight;
     }
-    // Atleat one uppercase alphabet
+    // At least one uppercase alphabet
     if (/.*[A-Z].*/.test(password)) {
         percentage = percentage + ownWeight;
     }
-    // Atleat one special character
+    // At least one special character
     if (specialChars.test(password)) {
         percentage = percentage + ownWeight;
     }
-    // lenght altest 8 or above 
+    // length at least 8 or above 
     if (password.length >= 8) {
         percentage = percentage + ownWeight;
     }

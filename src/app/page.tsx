@@ -17,6 +17,7 @@ import { GenerateButton } from '@/components/GenerateButton.style'
 import { EmptyMeasure } from '@/components/PasswordStrenghtComponents.style'
 import { FaArrowRight } from "react-icons/fa6";
 import { SliderRange } from '@/components/SliderRange.style'
+
 interface ICharacters{
   id:number,
   activate:boolean,
@@ -80,7 +81,7 @@ const MainPage = ()=> {
       event.preventDefault()
       // console.log("MOVEEE")
       if(canDrag){
-        console.log("RIGHT",sliderPosRight)
+        // console.log("RIGHT",sliderPosRight)
         const mouseXPosition = sliderPosLeft?event.clientX - sliderPosLeft:0
         if(mouseXPosition>=475){
           setBallPosition(475)
